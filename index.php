@@ -181,7 +181,7 @@
           
           //Redirect back to app form or any browser
            //header("Location: https://form-application-gyqlb.ondigitalocean.app/");
-           header("Location: daily-yield-form.html");
+           header("Location: index.php");
             
            exit;
             
