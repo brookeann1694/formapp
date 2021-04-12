@@ -220,9 +220,11 @@
 		   </div>
 		   
 		  <input type="text" name="add_comments" placeholder="*NOT REQUIRED* Additional comments" id="add_comments">
+			  
 		 </div>
-	
-        <button type="submit" >Submit</button>
+
+	      
+	         <input name = "add" type = "submit" id = "add"  value = "SUBMIT">
       </div>
     </form>
    <?php
