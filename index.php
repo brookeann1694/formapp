@@ -197,7 +197,7 @@
         <h1>Usable Harvest Yield Form</h1>
 		
 		 <div class="form-innerselect">
-		 <select name="employee_name" required>
+		 <select name="employee_name" id="employee_name" required>
            <option value="Select Name"></option>
 		    <option value="" disabled selected>Name</option>
           <option value="Spongebob">Spongebob</option>
@@ -206,12 +206,12 @@
 		   </div>
 		   
       <div class="form-inner">
-		<input type="date" name="date_stamp" step="1" required>
-		 <input type="number" name="usable" placeholder="Usable Yield Weight" required>
-		 <input type="text" name="tray_id" placeholder="Tray ID" required>
+		<input type="date" name="date_stamp" id="date_stamp" step="1" required>
+		 <input type="text" name="usable" placeholder="Usable Yield Weight" id="usable" required>
+		 <input type="text" name="tray_id" placeholder="Tray ID" id="tray_id" required>
 		 
 		  <div class="form-innerselect">
-		 <select name="plant_type" required>
+		 <select name="plant_type" id="plant_type" required>
 		 <option value="" disabled selected>Plant Type</option>
            <option value="Select Plant Type"></option>
           <option value="Amnemonemomne">Amnemonemomne</option>
@@ -219,7 +219,7 @@
           <option value="Tacos">Tacos</option>
 		   </div>
 		   
-		  <input type="text" name="add_comments" placeholder="*NOT REQUIRED* Additional comments">
+		  <input type="text" name="add_comments" placeholder="*NOT REQUIRED* Additional comments" id="add_comments">
 		 </div>
 	
         <button type="submit" >Submit</button>
