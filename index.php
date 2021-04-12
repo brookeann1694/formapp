@@ -206,7 +206,7 @@
 		   </div>
 		   
       <div class="form-inner">
-		<input type="date" name="date_stamp" id="date_stamp" step="1" required>
+		<input type="text" name="date_stamp" id="date_stamp" step="1" required>
 		 <input type="text" name="usable" placeholder="Usable Yield Weight" id="usable" required>
 		 <input type="text" name="tray_id" placeholder="Tray ID" id="tray_id" required>
 		 
