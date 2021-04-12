@@ -163,7 +163,7 @@
             
           //Insert Data into Table from Form
             mysqli_select_db($conn, $dbname);
-            $sql = "INSERT INTO daily_usable_form_entries (employee_name, date_stamp, usable, tray_id, plant_type, add_comments)
+            $sql = "INSERT INTO daily_yield_entry (employee_name, date_stamp, usable, tray_id, plant_type, add_comments)
             VALUES
             ('$employee_name','$date_stamp','$usable','$tray_id','$plant_type','$add_comments')";
             //('$_POST[employee_name]','$_POST[date_stamp]','$_POST[usable]','$_POST[tray_id]','$_POST[plant_type]','$_POST[add_comments]')";
