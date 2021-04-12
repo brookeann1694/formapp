@@ -139,31 +139,34 @@
 
    <body>
       <?php
-         //Set Database Connection String
+        //Set Database Connection String
          if(isset($_POST['add'])) {
-            $dbhost = 'db-mysql-mtg-14981-do-user-9057563-0.b.db.ondigitalocean.com:25060';
+            $dbhost = 'db-mysql-sfo3-70323-do-user-8812855-0.b.db.ondigitalocean.com:25060';
             $dbuser = 'doadmin';
-            $dbpass = 'vmfgowz9s3x40idw';
-            $dbname = 'defaultdb';
+            $dbpass = 'hdtvkle2drdbbajr';
+            $dbname = 'dream_harvest_yield';
             $conn = mysqli_connect($dbhost, $dbuser, $dbpass);
          
           //Test Database Connection
             if(! $conn ) {
                die('Could not connect: ' . mysql_error());
-               //echo "Database Connection Fialed";
+               //echo "Database Connection Failed";
             }
                         
           //Set variables for POST data
-            $project_title = $_POST['project_title'];
-            $project_owner = $_POST['project_owner'];
-            $submission_date = $_POST['submission_date'];
+	$employee_name = $_POST['employee_name'];
+	$date_stamp = $_POST['date_stamp'];
+	$usable = $_POST['usable'];
+	$tray_id = $_POST['tray_id'];
+	$plant_type = $_POST['plant_type'];
+	$add_comments = $_POST['add_comments'];
             
           //Insert Data into Table from Form
             mysqli_select_db($conn, $dbname);
-            $sql = "INSERT INTO project_tbl (project_title, project_owner, submission_date)
+            $sql = "INSERT INTO daily_usable_form_entries (employee_name, date_stamp, usable, tray_id, plant_type, add_comments)
             VALUES
-            ('$project_title','$project_owner','$submission_date')";
-            //('$_POST[project_title]','$_POST[project_owner]','$_POST[submission_date]')";
+            ('$employee_name','$date_stamp','$usable','$tray_id','$plant_type','$add_comments')";
+            //('$_POST[employee_name]','$_POST[date_stamp]','$_POST[usable]','$_POST[tray_id]','$_POST[plant_type]','$_POST[add_comments]')";
 
           //Validate if Query completed successfully.
             if (!mysqli_query($conn,$sql))
@@ -177,8 +180,8 @@
             mysqli_close($conn);       
           
           //Redirect back to app form or any browser
-           //header("Location: https://sample-app-2utwd.ondigitalocean.app/");
-           header("Location: index.php");
+           //header("Location: https://form-application-gyqlb.ondigitalocean.app/");
+           header("Location: daily-yield-form.html");
             
            exit;
             
